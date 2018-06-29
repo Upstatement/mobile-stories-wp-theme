@@ -1,0 +1,14 @@
+{
+  "name": "mobile-stories-wp-theme",
+  "version": "1.0.0",
+  "description": "A WordPress theme for exploring mobile story telling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "composer": "^3.1.0"
+  }
+}

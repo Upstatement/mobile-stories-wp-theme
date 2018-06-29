@@ -1,4 +1,4 @@
-# Ups Dock WordPress Starter Kit
+# Mobile Stories WordPress Theme
 
 This starter kit is used to create the following:
 

@@ -2,7 +2,10 @@
   "name": "mobile-stories-wp-theme",
   "version": "1.0.0",
   "description": "A WordPress theme for exploring mobile story telling",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/upstatement/mobile-stories-wp-theme.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

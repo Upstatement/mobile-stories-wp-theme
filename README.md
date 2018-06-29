@@ -7,7 +7,7 @@ This starter kit is used to create the following:
 ## Setup
 
 1. Make sure [Ups Dock](https://github.com/Upstatement/ups-dock) is installed and up and running
-2. Create a `.env` file in the root of your directory and Copy the values in the *Mobile Stories - Dotenv* secure note into that file. You can find this note in 1Passwoed. 
+2. Create a `.env` file in the root of your directory and Copy the values in the "Mobile Stories - Dotenv" secure note into that file. You can find this note in 1Passwoed. 
 3. Run `npm install` and then `composer install` from the root directory to install all the required packages and plugins. 
 3. From the root directory run `./bin/install.sh`
 

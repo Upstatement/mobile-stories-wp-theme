@@ -29,6 +29,7 @@
       "wpackagist-plugin/gutenberg":"*"
   },
   "scripts": {
-      "post-install-cmd": ["cp -R plugins/* ../../plugins"]
+      "pre-install-cmd": ["cp -R gutenberg-blocks/* plugins"],
+      "post-install-cmd": ["cp -R plugins/* ../../plugins" ]
   }
 }

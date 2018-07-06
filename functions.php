@@ -6,6 +6,9 @@ define('MOBILE_DOMAIN', get_site_url());
 define('MOBILE_SITE_NAME', get_bloginfo('name'));
 include MOBILE_THEME_PATH . 'vendor/autoload.php';
 
+$timber = new \Timber\Timber();
+Timber::$dirname = 'templates';
+
 /**
  * Custom post types and taxonomies.
  */

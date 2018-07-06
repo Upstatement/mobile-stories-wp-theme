@@ -1,29 +1,5 @@
-<?php get_header(); ?>
+<?php
 
-<main>
-	<?php
-	if ( have_posts() ) :
-		/* Start the Loop */
-		while ( have_posts() ) :
-			the_post(); ?>
-
-		<article <?php post_class(); ?>>
-			<header>
-				<h1><?php the_title(); ?></h1>
-			</header>
-			<div>
-				<?php the_content(); ?>
-			</div>
-		</article>
-
-	<?php
-		endwhile;
-	else :
-	?>
-	<h2>No posts found.</h2>
-	<?php
-	endif;
-	?>
-</main>
-
-<?php get_footer(); ?>
+$context = Timber::get_context();
+$context['posts'] = Timber::get_posts();
+Timber::render( 'index.twig', $context );

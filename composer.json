@@ -1,15 +1,31 @@
 {
   "name": "upstatement/mobile-stories-wp-theme",
-  "repositories": [{
+  "repositories": [
+    {
       "type": "composer",
       "url": "https://wpackagist.org"
-  }],
+    },
+    {
+      "type": "package",
+      "package": {
+          "name": "advanced-custom-fields/advanced-custom-fields-pro",
+          "version": "5.6.7",
+          "type": "wordpress-plugin",
+          "dist": {
+              "type": "zip",
+              "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MzQwMzh8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTA3LTA5IDEyOjU4OjA4&t=5.6.7"
+          }
+      }
+    }
+  ],
   "extra": {
       "installer-paths": {
           "plugins/{$name}/": ["wpackagist-plugin/*", "type:wordpress-plugin"]
       }
   },
   "require": {
+      "advanced-custom-fields/advanced-custom-fields-pro": "5.6.7",
+      "timber/timber": "1.7",
       "wpackagist-plugin/gutenberg":"*"
   },
   "scripts": {

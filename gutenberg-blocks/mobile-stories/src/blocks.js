@@ -9,5 +9,4 @@
  * Webpack is compiling as the input file.
  */
 
-import './customBlocks/block/block.js';
 import './customBlocks/titleCard/index.js';

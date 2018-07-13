@@ -1,0 +1,33 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+.gutenberg .container {
+  border: 1px solid #cccccc;
+  padding: 1rem; }
+
+.gutenberg .button-container {
+  text-align: center;
+  padding: 22% 0;
+  background: #f1f1f1;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  margin: 0 0 1.2rem 0; }
+
+.gutenberg .heading {
+  font-size: 1.5rem;
+  font-weight: 600; }
+
+.gutenberg .image {
+  height: 15.7rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; }

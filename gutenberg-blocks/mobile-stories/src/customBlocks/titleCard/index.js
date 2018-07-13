@@ -104,36 +104,6 @@ registerBlockType('card-block/main', {
 			);
 		},
 
-      // <div className="card card-cover">
-      //   <MediaUpload
-      //     onSelect={ media => { setAttributes({ imageAlt: media.alt, imageUrl: media.url }); } }
-      //     type="image"
-      //     value={ attributes.imageID }
-      //     render={ ({ open }) => getImageButton(open) }
-      //   />
-      //   <PlainText
-      //     onChange={ content => setAttributes({ headline: content }) }
-      //     value={ attributes.title }
-      //     placeholder="Your card title"
-      //     className="heading"
-      //   />
-      //   <PlainText
-      //     onChange={ content => setAttributes({ subhead: content }) }
-      //     value={ attributes.subtitle }
-      //     placeholder="Your card subtitle"
-      //     className="heading"
-      //   />
-			// 	<PlainText
-      //     onChange={ content => setAttributes({ byline: content }) }
-      //     value={ attributes.byline }
-      //     placeholder="Your byline"
-      //     className="heading"
-  //     //   />
-  //     // </div>
-  //   );
-
-  // },
-
 	// Markup saved in database
   save({ attributes }) {
 		const divStyle = {

@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: mobile-stories — CGB Gutenberg Block Plugin
+ * Plugin Name: Mobile Stories Gutenberg Block Plugin
  * Plugin URI: https://github.com/ahmadawais/create-guten-block/
  * Description: mobile-stories — is a Gutenberg plugin created via create-guten-block.
  * Author: mrahmadawais, maedahbatool

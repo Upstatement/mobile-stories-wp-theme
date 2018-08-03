@@ -13,6 +13,8 @@ let mix = require('laravel-mix');
 
 mix.js('blocks/mobile-story/block.js', 'blocks/mobile-story/block.build.js');
 mix.sass('blocks/mobile-story/editor.scss', 'blocks/mobile-story/editor.css');
+mix.js('static/js/app.js', 'static/dist');
+mix.sass('static/scss/style.scss', 'static/dist');
 
 // Full API
 // mix.js(src, output);

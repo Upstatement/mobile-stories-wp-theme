@@ -1,4 +1,6 @@
 {
     "/blocks/mobile-story/block.build.js": "/blocks/mobile-story/block.build.js",
-    "/blocks/mobile-story/editor.css": "/blocks/mobile-story/editor.css"
+    "/blocks/mobile-story/editor.css": "/blocks/mobile-story/editor.css",
+    "/static/dist/style.css": "/static/dist/style.css",
+    "/static/dist/app.js": "/static/dist/app.js"
 }

@@ -3,3 +3,4 @@
 node_modules
 block.build.js
 editor.css
+static/dist

@@ -19,3 +19,10 @@ function mobile_architecture()
 }
 
 add_action('init', 'mobile_architecture', 0);
+
+function wpdocs_theme_name_scripts()
+{
+    wp_enqueue_style('style-name', get_template_directory_uri() . '/static/dist/style.css');
+    wp_enqueue_script('script-name', get_template_directory_uri() . '/static/dist/app.js', array(), '1.0.0', true);
+}
+add_action('wp_enqueue_scripts', 'wpdocs_theme_name_scripts');

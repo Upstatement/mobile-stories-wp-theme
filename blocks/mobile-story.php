@@ -38,15 +38,15 @@ function mobile_story_block_init()
         filemtime("$dir/$editor_css")
     );
 
-    $style_css = 'mobile-story/style.css';
-    wp_register_style(
-        'mobile-story-block',
-        get_template_directory_uri() . "/blocks/" . $style_css,
-        array(
-            'wp-blocks',
-        ),
-        filemtime("$dir/$style_css")
-    );
+    // $style_css = 'mobile-story/style.css';
+    // wp_register_style(
+    //     'mobile-story-block',
+    //     get_template_directory_uri() . "/blocks/" . $style_css,
+    //     array(
+    //         'wp-blocks',
+    //     ),
+    //     filemtime("$dir/$style_css")
+    // );
 
     register_block_type('mobile-stories/card', array(
         'editor_script' => 'mobile-story-block-editor',

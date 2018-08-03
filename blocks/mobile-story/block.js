@@ -1,5 +1,8 @@
 const { registerBlockType } = wp.blocks;
-const { RichText, BlockControls, AlignmentToolbar } = wp.editor;
+const { InnerBlocks} = wp.editor;
+
+const ALLOWED_BLOCKS = [ 'core/image', 'core/paragraph', 'core/cover-image', 'core/heading' ];
+
 
 registerBlockType("mobile-stories/card", {
   title: "Mobile Story Card",
@@ -17,50 +20,32 @@ registerBlockType("mobile-stories/card", {
       type: "array",
       source: "children",
       selector: "p"
-    },
-    alignment: {
-      type: "string"
     }
   },
 
   edit({ attributes, className, setAttributes }) {
-    const { content, alignment } = attributes;
+    const { content } = attributes;
 
     function onChangeContent(newContent) {
       setAttributes({ content: newContent });
     }
 
-    function onChangeAlignment(newAlignment) {
-      setAttributes({ alignment: newAlignment });
-    }
-
     return (
       (
-        <BlockControls key="controls">
-          <AlignmentToolbar value={alignment} onChange={onChangeAlignment} />
-        </BlockControls>
-      ),
-      (
-        <RichText
-          tagName="p"
-          className={className}
-          onChange={onChangeContent}
-          value={content}
-        />
+        <div className={ className }>
+				  <InnerBlocks allowedBlocks={ ALLOWED_BLOCKS } />
+			  </div>
       )
     );
   },
 
   save({ attributes, className }) {
-    const { content, alignment } = attributes;
+    const { content } = attributes;
 
     return (
-      <RichText.Content
-        tagName="p"
-        className={className}
-        style={{ textAlign: alignment }}
-        value={content}
-      />
+      <div>
+				<InnerBlocks.Content />
+			</div>
     );
   }
 });

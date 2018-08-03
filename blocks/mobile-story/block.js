@@ -3,6 +3,12 @@ const { InnerBlocks} = wp.editor;
 
 const ALLOWED_BLOCKS = [ 'core/image', 'core/paragraph', 'core/cover-image', 'core/heading' ];
 
+const TEMPLATE = [
+  [ 'core/cover-image' ],
+  [ 'core/heading' ],
+  [ 'core/paragraph' ],
+];
+
 
 registerBlockType("mobile-stories/card", {
   title: "Mobile Story Card",
@@ -33,7 +39,7 @@ registerBlockType("mobile-stories/card", {
     return (
       (
         <div className={ className }>
-				  <InnerBlocks allowedBlocks={ ALLOWED_BLOCKS } />
+				  <InnerBlocks allowedBlocks={ ALLOWED_BLOCKS } template={ TEMPLATE } />
 			  </div>
       )
     );

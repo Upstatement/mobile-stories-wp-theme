@@ -1,5 +1,78 @@
+// Typography Overrides
+textarea, p, h1, h2, h3, h4, li, cite {
+  font-family: 'Helvetica'!important;
+  font-weight: bold;
+}
+
+// Wordpress Admin UI
+#adminmenu, #adminmenuwrap, #adminmenuback {
+  background: black;
+}
+#adminmenuwrap {
+  opacity: .3; // dim wp sidebar
+  transition: opacity .2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+.wp-menu-image {
+  display: none; // hide wp sidebar icons
+}
+.wp-menu-open {
+  background: none!important; // don't use a color highlight for selected menu item
+}
+
+// Gutenberg Horizontal Toolbar
+.edit-post-header {
+  background: black;
+}
+.dashicon {
+  fill: white!important;
+}
+
+// Gutenberg Block Editor Zone
+#editor {
+  background: black;
+  font-family: 'Helvetica';
+}
+.editor-writing-flow {
+  padding-top: 100px;
+}
+
+// Post Title
+#post-title-0 {
+  color: white;
+  &::placeholder {
+    color: white;
+    opacity: .5;
+  }
+}
+.editor-post-title__block{
+  margin-left: 0;
+  position: fixed;
+  top: 120px;
+}
+
+// Gutenberg Cards
+.editor-block-list__layout {
+  display: flex;
+}
+
+// Block Mover Buttons
+.editor-block-mover {
+  left: 0;
+  top: -40px;
+  width: 200px;
+}
+
+// Mobile Story Card
 .wp-block-mobile-stories-card {
-    margin-bottom: 200px;
-    border-bottom: 5px solid #000;
-    border-top: 5px solid #000;
+    background: white;
+    width: 400px;
+    border-radius: 5px;
+    padding: 20px;
+}
+.editor-inner-blocks .editor-block-list__layout {
+  display: block;
 }

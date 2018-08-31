@@ -16,3 +16,8 @@ echo "Starting WordPress..."
 echo
 docker-compose up -d
 echo
+
+echo "Starting static dev server.."
+echo
+npm run dev
+echo

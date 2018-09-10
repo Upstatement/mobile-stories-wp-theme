@@ -23,9 +23,63 @@ textarea, p, h1, h2, h3, h4, li, cite {
   background: none!important; // don't use a color highlight for selected menu item
 }
 
+// Buttons
+.components-button{
+  background: none!important;
+  color: black!important;
+  box-shadow: none!important;
+}
+.components-icon-button /* :not(.editor-media-placeholder__upload-button)*/ {
+  background-color: black!important;
+  border-radius: 50%!important;
+  transition: background-color .2s ease-in-out;
+  box-shadow: none!important;
+
+  &:hover {
+    background-color: #444!important;
+    box-shadow: none!important;
+  }
+}
+.components-form-file-upload {
+  .dashicons-upload {
+    display: none; // hide upload photo icon
+  }
+}
+.components-placeholder__label {
+  .dashicons-format-image {
+    display: none; // hide cover photo placeholder icon
+  }
+}
+.editor-post-publish-panel__toggle, .editor-post-preview {
+  border-radius: 99px!important;
+  padding-left: 16px!important;
+  padding-right: 16px!important;
+  text-shadow: none!important;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  &:hover {
+    opacity: .8;
+  }
+}
+.editor-post-publish-panel__toggle { // Publish button
+  background: white!important;
+  font-weight: bold;
+}
+.editor-post-preview {
+  color: white !important;
+  border: none;
+}
+.table-of-contents {
+  display: none!important;
+}
+.dashicons-saved {
+  display: none!important;
+}
+
 // Gutenberg Horizontal Toolbar
 .edit-post-header {
   background: black;
+  border-bottom: none;
 }
 .dashicon {
   fill: white!important;
@@ -37,41 +91,93 @@ textarea, p, h1, h2, h3, h4, li, cite {
   font-family: 'Helvetica';
 }
 .editor-writing-flow {
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 // Post Title
-#post-title-0 {
-  color: white;
-  &::placeholder {
-    color: white;
-    opacity: .5;
-  }
-}
 .editor-post-title__block{
   margin-left: 0;
   position: fixed;
   top: 120px;
+}
+#post-title-0 {
+  color: white;
+  border-width: 0px!important;
+  transition: all .2s ease-in-out;
+  border-radius: 8px;
+  line-height: 1.1;
+  cursor: text;
+  &::placeholder {
+    color: white;
+    opacity: .5;
+  }
+  &:hover {
+    opacity: .7;
+  }
 }
 
 // Gutenberg Cards
 .editor-block-list__layout {
   display: flex;
 }
+.components-toolbar {
+  display: none;
+}
+.is-hovered {
+  box-shadow: 0 0 10px #ddd !important;
+  border-radius: 4px;
+}
 
 // Block Mover Buttons
 .editor-block-mover {
-  left: 0;
-  top: -40px;
-  width: 200px;
+  background-color: none!important;
+}
+.editor-block-mover svg {
+  fill: grey;
+  &:hover {
+    fill: white;
+  }
+}
+.editor-writing-flow > div > div > .editor-block-list__layout >
+.editor-block-list__block { // style root-level blocks
+
+  &.is-hovered { // style hovered blocks
+    background: none!important;
+    box-shadow: none!important;
+    .wp-block-mobile-stories-card {
+      box-shadow: 0 0 30px #ddd;
+    }
+  }
+
+  & > .editor-block-mover {
+    left: 0!important;
+    top: -40px!important;
+    display: flex;
+    width: 200px;
+
+    .editor-block-mover__control {
+      transform: rotate(-90deg); // rotate up/down arrows to look like left/right
+      &:hover, &:active, &:focus {
+        background: none;
+        box-shadow: none;
+      }
+    }
+  }
+}
+.is-selected > .editor-block-list__block-edit:before {
+  outline: none!important;
+}
+.is-hovered > .editor-block-list__block-edit:before {
+  outline: none!important;
 }
 
 // Mobile Story Card
 .wp-block-mobile-stories-card {
     background: white;
     width: 400px;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 20px;
+    margin-right: 20px;
 }
 .editor-inner-blocks .editor-block-list__layout {
   display: block;
